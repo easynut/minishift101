@@ -100,10 +100,8 @@ As mentioned in the `minishift start` output, you can use the user _developer_ a
 
 ![OpenShift catalog](../images/openshift_console.png)
 
-หลังจากที่ logic เข้ามาแล้ว เราจะเห็นหน้า Catalog ซึ่งก็มีตัวอย่าง applications ให้เราลองหยิบไป deploy บน local cluster ของเราได้ สามารถย้อนหลับไปดู command  ที่ [section 1.2](./#12-creating-an-app-from-a-dockerhub-image)
+หลังจากที่ logic เข้ามาแล้ว เราจะเห็นหน้า Catalog ซึ่งก็มีตัวอย่าง applications ให้เราลองหยิบไป deploy บน local cluster ของเราได้ สามารถย้อนหลับไปดู command  ที่ [section 1.2](./#12-%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-app-%E0%B8%94%E0%B9%89%E0%B8%A7%E0%B8%A2-images-%E0%B8%88%E0%B8%B2%E0%B8%81-dockerhub)
 
-Once you login, you will be redirected to the browser catalog where there will be a number of sample applications available for you to chose to deploy. This mirrors the OpenShift template steps we saw in [section 1.2](./#12-creating-an-app-from-a-dockerhub-image). We can also create and switch between projects but note, you are limited to the provided sample applications available in the console catalog.
+สามารถอ่านเพิ่มเติมได้ที่ [reference](https://docs.openshift.com/enterprise/3.0/dev_guide/new_app.html) เกี่ยวกับการใช้ `new-app` command เพื่อสร้าง OpenShift applications.
 
-See this [reference](https://docs.openshift.com/enterprise/3.0/dev_guide/new_app.html) for a more comprehensive overview of how to use the `new-app` command to create OpenShift applications.
-
-Congratulations! You have learnt several ways to create applications in OpenShift! To see how we can manage our applications in OpenShift, let's continue on to the [next Lab (Lab 3)](../Lab3/README.md)
+Good job, Keep it up !! ณ ตอนนี้ ทุกท่านได้ทราบวิธีการสร้าง applications ใน Openshift. ขั้นตอนต่อไป เรามาดูกันว่า เราะจัดการ applications ใน Openshift ย่างไร ที่ [Lab ถัดไป (Lab 3)](../Lab3/README-th.md)
