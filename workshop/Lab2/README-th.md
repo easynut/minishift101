@@ -70,10 +70,12 @@ $ oc new-app -f /path/to/nodejs.json
 
 As this template lives in a repo, we could have also run this from source as described in [section 1.1](./#11-creating-an-app-from-source)
 
-ถ้า template นี้ได้ถูกเก็บไว้ที่ repo อยู่แล้ว, เราสามารถสร้าง app จาก source code ตาม [section 1.1](./#11-creating-an-app-from-source)
+ถ้า template นี้ได้ถูกเก็บไว้ที่ repo อยู่แล้ว, เราสามารถสร้าง app จาก source code ตาม [section 1.1](./##11-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-app-%E0%B8%88%E0%B8%B2%E0%B8%81-souce-code)
 
-### 1.4 Creating an app from the OpenShift UI
+### 1.4 Creating an app from the OpenShift UI สร้าง app จาก Openshift UI
 
+ถ้าเราไม่ต้องการสร้าง app จาก cli ผ่าน cmd/terminal, อีกทางเลือกนึงที่เรียกได้ว่า user-friendly กว่าคือการใช้ Openshift UI ซึ่งได้ถูกออกมาแบบมาให้ใช้งานง่าย โดยไม่ขึ้นกับ cli tool เรียกได้ว่าค่อนข้างสะดวก และย่นระยะเวลาในการเรียนรู้เพิ่มเติมเกี่ยวกับ cli tool (ยกตัวอย่างการใช้ kubernetes ซึ่งจะไม่ได้มี UI ให้เราใช้สร้าง projects, applications). OpenShift console จะมากับทุกๆ cluster ซึ่งสำหรับ local cluster ที่เรารันขึ้นมา URL/address จะแสดงไว้หลังจากที่เราสั่ง `minishift start` ตามที่เราได้ปฏิบัติไปแล้วใน [setup](https://github.com/easynut/minishift101/blob/master/workshop/README-th.md#start-the-openshift-server):
+ 
 If you're not a fan of the cli and wanted a more visual way of deploying applications in your cluster, you also have the option of using the OpenShift console. This is available locally at the address given after running `minishift start` as we did in the [setup](https://github.com/mofesal/minishift-101/blob/master/workshop/README.md#start-the-openshift-server):
 
 ```console
