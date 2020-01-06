@@ -5,7 +5,7 @@
 ## 1. Creating an app 
 
 การสร้าง App ใน Openshift cluster นั้นมีหลายวิธี 
-- จาก souce code
+- จาก Souce code
 - จาก DockerHub images
 - จาก Openshift templates
 - จาก Openshift UI
@@ -86,13 +86,56 @@ You don't have any projects. You can try to create a new project, by running
     oc new-project <projectname>
 ```
 
+ต้องอย่าลืมว่า RBAC (Role Base Access Control) จะมากับ Openshift เป็น default นะครับ ฉะนั้น User ที่เราใช้ผ่าน cli oc ต้องมี permission ทำการสร้าง project, application และอื่นๆ ด้วยนะครับ
+
+```
+$ oc create clusterrolebinding <any_valid_name> --clusterrole=sudoer --user=<username>
+```
+
 ต่อไป สร้าง application ด้วย source code จาก github
 
 ```
 $ oc new-app https://github.com/sclorg/nodejs-ex -l name=myapp
+warning: Cannot check if git requires authentication.
+--> Found image 93de123 (14 months old) in image stream "openshift/nodejs" under tag "10" for "nodejs"
+
+    Node.js 10.12.0
+    ---------------
+    Node.js  available as docker container is a base platform for building and running various Node.js  applications and frameworks. Node.js is a platform built on Chrome's JavaScript runtime for easily building fast, scalable network applications. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+
+    Tags: builder, nodejs, nodejs-10.12.0
+
+    * The source repository appears to match: nodejs
+    * A source build using source code from https://github.com/sclorg/nodejs-ex will be created
+      * The resulting image will be pushed to image stream tag "nodejs-ex:latest"
+      * Use 'start-build' to trigger a new build
+      * WARNING: this source repository may require credentials.
+                 Create a secret with your git credentials and use 'set build-secret' to assign it to the build config.
+    * This image will be deployed in deployment config "nodejs-ex"
+    * Port 8080/tcp will be load balanced by service "nodejs-ex"
+      * Other containers can access this service through the hostname "nodejs-ex"
+
+--> Creating resources with label name=myapp ...
+    imagestream.image.openshift.io "nodejs-ex" created
+    buildconfig.build.openshift.io "nodejs-ex" created
+    deploymentconfig.apps.openshift.io "nodejs-ex" created
+    service "nodejs-ex" created
+--> Success
+    Build scheduled, use 'oc logs -f bc/nodejs-ex' to track its progress.
+    Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
+     'oc expose svc/nodejs-ex'
+    Run 'oc status' to view your app.
+
 ```
 
+สามารถตรวจสอบสถานะ, deployment, services, การ expose และ route 
 
+```
+$ oc get dc
+$ oc get svc
+$ oc expose svc nodejs-ex
+$ oc get route
+```
 
 ### 1.4 Creating an app from the OpenShift UI สร้าง app จาก Openshift UI
 
