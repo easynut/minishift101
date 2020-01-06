@@ -2,21 +2,19 @@
 
 # Setup overview
 
-The following section describes how to install Minishift and the required dependencies.
-
-These are the basic steps for setting up Minishift on your personal system:
+ขั้นตอนด้านล่างจะอธิบาย การติดตั้ง minishift และ depenencies ต่างๆ ซึ่ง Basic stps สำหรับการติดตั้งบน personal system ประกอบไปด้วย
 
 1. [Configure the virtualization environment](./#configure-the-virtualization-environment)
 2. [Download and install Minishift](./#download-and-install-minishift)
 3. [Start the OpenShift Server](./#start-the-openshift-server)
 
-The setup procedure should be run as a regular user with permission to launch virtual machines. In the procedure, you will see how to assign that permission, along with ways to configure your hypervisor and command shell to start and effectively interact with Minishift.
+สำคัญ เราควรจะต้องมีสิทธิ๋ในการติดตั้ง software บน laptop/pc ที่เราจะใช้งานด้วยนะครับ
 
 # Configure the virtualization environment
 
-Minishift can be installed on Windows, Linux and Mac but depending on your platform, you will need to configure a compatible hypervisor in order for the OpenShift cluster to be created within the virtualised environment. Verify that the hypervisor of your choice is installed and enabled on your system before you set up Minishift. Once the hypervisor is up and running, additional setup is required for Minishift to work with that hypervisor.
+Minishift สามารถถูกนำไปติดตั้งบน Windows, Linux และ macOS ได้ แต่เพราะว่าแต่ละ OS ถูกออกแบบมาแตกต่างกัน ดังนั้น Hypbervisor ที่เหมาะสมจะต้องถูกหยิบมาใช้ ซึ่ง Minishift จะทำงานควบคู่กับ Hypervisor นั่นเอง
 
-See the appropriate section for your hypervisor and operating system:
+ขั้นตอนการติดตั้ง สามารถดูได้ตามหมวดหมู่ OS ด้านล่างนี้
 
 - For Linux, [set up the KVM driver](https://docs.okd.io/latest/minishift/getting-started/setting-up-virtualization-environment.html#setting-up-kvm-driver)
 - For macOS, ~~[set up the xhyve driver](https://docs.okd.io/latest/minishift/getting-started/setting-up-virtualization-environment.html#setting-up-xhyve-driver)or~~ [set up the hyperkit driver](https://docs.okd.io/latest/minishift/getting-started/setting-up-virtualization-environment.html#setting-up-hyperkit-driver)
@@ -25,13 +23,17 @@ See the appropriate section for your hypervisor and operating system:
 
 *NOTE: If you have installed docker-ce for Mac on your machine, the hyperkit driver is already installed*
 
+[![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/mDAEGGaRYqw/hqdefault.jpg)](https://www.youtube.com/watch?v=mDAEGGaRYqw)
+
+[![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/fS-xhhxz8dY/hqdefault.jpg)](https://www.youtube.com/watch?v=fS-xhhxz8dY)
+
 # Download and install Minishift
 
-To [download Minishift](https://docs.okd.io/latest/minishift/getting-started/installing.html), you can either install from source or if on Mac, you can install using Homebrew. 
+[download Minishift](https://docs.okd.io/latest/minishift/getting-started/installing.html) สำหรับผู้ใช้งาน macOS แนะนำให้ติดตั้งผ่าน Homebrew นะครับ
 
 # Start the OpenShift Server
 
-Providing you have completed the previous steps successfully, you will now be ready to start the OpenShift server. To do so, you should be able to run:
+เมื่อทำการติดตั้งเรียบร้อยแล้ว อับดับต่อไปคือการสั่งเปิดใช้งาน Minishift
 
 ```
 $ minishift start --vm-driver <driver>
@@ -62,4 +64,6 @@ To login as administrator:
 
 After setting up your cluster, you may have specific requirements that you want to enforce in your cluster. The minishift tool allows you to manage the lifecycle of the single-node OpenShift cluster as well as set environment variables, persistent storage and proxy options if your machine is behind a proxy. For more information on these configurations, see the following [link](https://docs.okd.io/latest/minishift/using/basic-usage.html#runtime-options).
 
-Once you are all set up, you can move on to [Lab 1](./Lab1/README.md)
+Minishift tool มีไว้ให้เราจัดการ single-node Openshift cluster รวมไปถึง environment variables, persistent storage และ proxy สามารถอ่านเพิ่มเติมการปรับแต่ง configurations ได้จาก ที่นี่ [link](https://docs.okd.io/latest/minishift/using/basic-usage.html#runtime-options).
+
+เมื่อ Minishift สามารถ run ได้ปกติแล้ว สามารถไปที่ [Lab 1](./Lab1/README-th.md)
