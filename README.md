@@ -1,5 +1,7 @@
 [日本語はこちら - Japanese version](./README-ja.md)
 
+[ภาษาไทย - Thai version](./README-th.md)
+
 <img src="https://avatars1.githubusercontent.com/u/38341030?s=150&v=4">
 
 # What is OpenShift?
