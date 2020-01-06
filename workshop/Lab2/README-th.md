@@ -70,7 +70,8 @@ $ oc new-app -f /path/to/nodejs.json
 
 ถ้า template นี้ได้ถูกเก็บไว้ที่ repo อยู่แล้ว, เราสามารถสร้าง app จาก source code ตาม [section 1.1](./##11-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-app-%E0%B8%88%E0%B8%B2%E0%B8%81-souce-code)
 
-### ตัวอย่าง deploy ด้วย source code จาก github
+
+### "ตัวอย่าง deploy ด้วย source code จาก github"
 
 หลังจากที่เรา `oc login` ผ่าน cmd/terminal มาแล้ว เราสามารถ deploy sample application จาก github ได้
 
