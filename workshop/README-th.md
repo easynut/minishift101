@@ -21,11 +21,9 @@ Minishift สามารถถูกนำไปติดตั้งบน Win
 - For Windows, [set up the Hyper-V driver](https://docs.okd.io/latest/minishift/getting-started/setting-up-virtualization-environment.html#setting-up-hyperkit-driver)
 - For VirtualBox (all platforms), [set up Minishift to use VirtualBox](https://docs.okd.io/latest/minishift/getting-started/setting-up-virtualization-environment.html#setting-up-virtualbox-driver)
 
-*NOTE: If you have installed docker-ce for Mac on your machine, the hyperkit driver is already installed*
+*NOTE: สำหรับ macOS users, ถ้าได้ทำการติดตั้ง Docker Desktop แล้ว ในตัวของมันจะมี hyperkit มาด้วยอยู่แล้วนะครับ และสามารถดู video การติดตั้ง minishift บน Windows, macOS จาก link ด้านล่าง*
 
-[![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/mDAEGGaRYqw/hqdefault.jpg)](https://www.youtube.com/watch?v=mDAEGGaRYqw)
-
-[![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/fS-xhhxz8dY/hqdefault.jpg)](https://www.youtube.com/watch?v=fS-xhhxz8dY)
+[![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/mDAEGGaRYqw/hqdefault.jpg)](https://www.youtube.com/watch?v=mDAEGGaRYqw) [![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/fS-xhhxz8dY/hqdefault.jpg)](https://www.youtube.com/watch?v=fS-xhhxz8dY)
 
 # Download and install Minishift
 
@@ -33,13 +31,13 @@ Minishift สามารถถูกนำไปติดตั้งบน Win
 
 # Start the OpenShift Server
 
-เมื่อทำการติดตั้งเรียบร้อยแล้ว อับดับต่อไปคือการสั่งเปิดใช้งาน Minishift
+เมื่อทำการติดตั้งเรียบร้อยแล้ว อับดับต่อไปคือการสั่งเปิดใช้งาน Minishift โดยระบุุการใช้ vm driver เช่น hyperkit หรือ virtualbox การรันครั้งแรกอาจจะใช้เวลามากเพราะว่ารวมไปถึงการติดตั้ง สร้าง minishift cluster. 
 
 ```
 $ minishift start --vm-driver <driver>
 ```
 
-Make sure to replace `<driver>` with the driver that you have used e.g. 'hyperkit' or 'virtualbox'. Once successfully started, you should be given the credentials to login to the cluster and the UI address as shown below:
+เมื่อ minishift cluster ได้ถูกติดตั้งเรียบร้อยแล้ว เราจะเห็นข้อมูลผ่าน cmd/terminal ตามด้านล่าง
 
 ```
 OpenShift server started.
@@ -58,11 +56,9 @@ To login as administrator:
 -- Exporting of OpenShift images is occuring in background process with pid 5703.
 ```
 
-*NOTE: Both your console address and your pid will be different.*
+*NOTE: URL สำหรับ Console และ PID จะไม่เหมือนกันกับที่แสดงข้างบนนะครับ*
 
 # Further cluster configurations
-
-After setting up your cluster, you may have specific requirements that you want to enforce in your cluster. The minishift tool allows you to manage the lifecycle of the single-node OpenShift cluster as well as set environment variables, persistent storage and proxy options if your machine is behind a proxy. For more information on these configurations, see the following [link](https://docs.okd.io/latest/minishift/using/basic-usage.html#runtime-options).
 
 Minishift tool มีไว้ให้เราจัดการ single-node Openshift cluster รวมไปถึง environment variables, persistent storage และ proxy สามารถอ่านเพิ่มเติมการปรับแต่ง configurations ได้จาก ที่นี่ [link](https://docs.okd.io/latest/minishift/using/basic-usage.html#runtime-options).
 
