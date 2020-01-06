@@ -1,4 +1,4 @@
-[日本語はこちら - Japanese version](./README-ja.md)
+[ภาษาไทย - Thai version](./README-th.md)
 
 # Setup overview
 
