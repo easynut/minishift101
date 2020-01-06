@@ -75,8 +75,6 @@ As this template lives in a repo, we could have also run this from source as des
 ### 1.4 Creating an app from the OpenShift UI สร้าง app จาก Openshift UI
 
 ถ้าเราไม่ต้องการสร้าง app จาก cli ผ่าน cmd/terminal, อีกทางเลือกนึงที่เรียกได้ว่า user-friendly กว่าคือการใช้ Openshift UI ซึ่งได้ถูกออกมาแบบมาให้ใช้งานง่าย โดยไม่ขึ้นกับ cli tool เรียกได้ว่าค่อนข้างสะดวก และย่นระยะเวลาในการเรียนรู้เพิ่มเติมเกี่ยวกับ cli tool (ยกตัวอย่างการใช้ kubernetes ซึ่งจะไม่ได้มี UI ให้เราใช้สร้าง projects, applications). OpenShift console จะมากับทุกๆ cluster ซึ่งสำหรับ local cluster ที่เรารันขึ้นมา URL/address จะแสดงไว้หลังจากที่เราสั่ง `minishift start` ตามที่เราได้ปฏิบัติไปแล้วใน [setup](https://github.com/easynut/minishift101/blob/master/workshop/README-th.md#start-the-openshift-server):
- 
-If you're not a fan of the cli and wanted a more visual way of deploying applications in your cluster, you also have the option of using the OpenShift console. This is available locally at the address given after running `minishift start` as we did in the [setup](https://github.com/mofesal/minishift-101/blob/master/workshop/README.md#start-the-openshift-server):
 
 ```console
 $ minishift start
@@ -90,22 +88,22 @@ You are logged in as:
     Password: <any value>
 ```
 
-Login to the UI:
+Login ผ่าน UI:
 
 ![OpenShift login](../images/openshift_login.png)
 
 As mentioned in the `minishift start` output, you can use the user _developer_ and password as any string of characters (at least one) and you will be able to access the UI.
 
-Access the catalog:
+ตามที่เราได้เห็นผ่านทาง cmd/terminal หลังจาก `minishift start` เราสามารถใช้ user _developer_ ส่วน password จะเป็นอะไรก็ได้
+
+หน้า Catalog:
 
 ![OpenShift catalog](../images/openshift_console.png)
+
+หลังจากที่ logic เข้ามาแล้ว เราจะเห็นหน้า Catalog ซึ่งก็มีตัวอย่าง applications ให้เราลองหยิบไป deploy บน local cluster ของเราได้ สามารถย้อนหลับไปดู command  ที่ [section 1.2](./#12-creating-an-app-from-a-dockerhub-image)
 
 Once you login, you will be redirected to the browser catalog where there will be a number of sample applications available for you to chose to deploy. This mirrors the OpenShift template steps we saw in [section 1.2](./#12-creating-an-app-from-a-dockerhub-image). We can also create and switch between projects but note, you are limited to the provided sample applications available in the console catalog.
 
 See this [reference](https://docs.openshift.com/enterprise/3.0/dev_guide/new_app.html) for a more comprehensive overview of how to use the `new-app` command to create OpenShift applications.
 
 Congratulations! You have learnt several ways to create applications in OpenShift! To see how we can manage our applications in OpenShift, let's continue on to the [next Lab (Lab 3)](../Lab3/README.md)
-
-
-
-
