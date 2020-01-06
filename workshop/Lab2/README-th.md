@@ -68,9 +68,31 @@ nodejs-ex
 $ oc new-app -f /path/to/nodejs.json
 ```
 
-As this template lives in a repo, we could have also run this from source as described in [section 1.1](./#11-creating-an-app-from-source)
-
 ถ้า template นี้ได้ถูกเก็บไว้ที่ repo อยู่แล้ว, เราสามารถสร้าง app จาก source code ตาม [section 1.1](./##11-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-app-%E0%B8%88%E0%B8%B2%E0%B8%81-souce-code)
+
+### ตัวอย่าง deploy ด้วย source code จาก github
+
+หลังจากที่เรา `oc login` ผ่าน cmd/terminal มาแล้ว เราสามารถ deploy sample application จาก github ได้
+
+```
+$ oc login
+Authentication required for https://192.168.99.100:8443 (openshift)
+Username: system
+Password:
+Login successful.
+
+You don't have any projects. You can try to create a new project, by running
+
+    oc new-project <projectname>
+```
+
+ต่อไป สร้าง application ด้วย source code จาก github
+
+```
+$ oc new-app https://github.com/sclorg/nodejs-ex -l name=myapp
+```
+
+
 
 ### 1.4 Creating an app from the OpenShift UI สร้าง app จาก Openshift UI
 
