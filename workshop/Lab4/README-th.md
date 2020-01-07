@@ -78,3 +78,6 @@ $ oc expose svc/nodejs-ex --hostname=www.example.com
 - เข้าถึง และ expose application อย่างไร
 
 เรียนรู้เพิ่มเติมเกี่ยวกับ Minishift ได้ที่นี่ [Minishift docs](https://docs.okd.io/latest/minishift/index.html)
+
+## ท้ายที่สุดแล้ว
+ติดตามช้อมูล และ ข่าวสาร ได้จาก facebook group [IBM Developer/IBM Cloud Thailand](ibm.biz/IBMCloudThailandFacebookGroup) นะครับ
