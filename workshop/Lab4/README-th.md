@@ -19,6 +19,7 @@ service/nodejs-ex-ingress exposed
 ```
 
 ทำการดูค่า NodePort:
+
 ```console
 $ oc get --export svc nodejs-ex-ingress
 NAME                TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)          AGE
@@ -26,13 +27,14 @@ nodejs-ex-ingress   LoadBalancer   <none>       172.29.51.89   8080:31692/TCP   
 ```
 
 เราสามารถใช้ command ด้านล่างนี้ เพื่อดู Internal-IP และ External-IP ของ node
+
 ```console
 $ oc get node -o wide
 NAME        STATUS    ROLES     AGE       VERSION           INTERNAL-IP     EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION              CONTAINER-RUNTIME
 localhost   Ready     <none>    13h       v1.11.0+d4cacc0   192.168.64.11   <none>        CentOS Linux 7 (Core)   3.10.0-957.5.1.el7.x86_64   docker://1.13.1
 ```
 
-We should then be able to access the application in the browser. In this example, we can access the Node application at `192.168.64.11:31692`:
+จาก Internal-IP จาก node และ NodePort ที่เราได้ค่ามาก่อนหน้านี้ ดังนั้น URL สำหรับเข้าถึง application ของเราก็คือ `192.168.64.11:31692`:
 
 ![OpenShift node app](../images/openshift_node_app.png)
 
@@ -63,18 +65,16 @@ $ oc port-forward POD [LOCAL_PORT:]REMOTE_PORT
 
 ## 4.3 Routes
 
-For web applications, the most common way to expose it is by a route. A route exposes the service as a host name. You can do this by running the command providing you have a host name available:
-
 วิธีที่นิยมใช้ expose web application คือการ expose ด้วย route ซึ่งจะเป็น service ด้วย hostname โดยให้ทาง Openshift เป็นผู้จัดการ โดยที่เราสามารถระบุ hostname ได้ด้วย
 
 ```
 $ oc expose svc/nodejs-ex --hostname=www.example.com
 ```
 
-ฮุเล่ ! ในที่สุดเราก็ได้ทำ Lab เสร็จสิ้นแล้ว ทุกท่านได้เรียนรู้การใช้ Openshift ทั้งหมดตามที่ list มาด้านล่างนี้
+ในที่สุดเราก็ได้ทำ Lab เสร็จสิ้นแล้ว ทุกท่านได้เรียนรู้การใช้ Openshift ทั้งหมดตามที่ list มาด้านล่างนี้
 - สร้าง Openshift project
 - สร้าง Openshift application ด้วยวิธีหลายๆแบบ
 - Monitor application อย่างไร
 - เข้าถึง และ expose application อย่างไร
 
-For more information on how to navigate Minishift, check the [Minishift docs](https://docs.okd.io/latest/minishift/index.html)
+เรียนรู้เพิ่มเติมเกี่ยวกับ Minishift ได้ที่นี่ [Minishift docs](https://docs.okd.io/latest/minishift/index.html)
