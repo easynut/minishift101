@@ -18,14 +18,14 @@ $ oc expose dc nodejs-ex --type=LoadBalancer --name=nodejs-ex-ingress
 service/nodejs-ex-ingress exposed
 ```
 
-To see the NodePort created, we can run:
+ทำการดูค่า NodePort:
 ```console
 $ oc get --export svc nodejs-ex-ingress
 NAME                TYPE           CLUSTER-IP   EXTERNAL-IP    PORT(S)          AGE
 nodejs-ex-ingress   LoadBalancer   <none>       172.29.51.89   8080:31692/TCP   <unknown>
 ```
 
-We can use the NodePort in conjuction with the cluster's internal or external IP which we can find in the following command:
+เราสามารถใช้ command ด้านล่างนี้ เพื่อดู Internal-IP และ External-IP ของ node
 ```console
 $ oc get node -o wide
 NAME        STATUS    ROLES     AGE       VERSION           INTERNAL-IP     EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION              CONTAINER-RUNTIME
@@ -35,6 +35,23 @@ localhost   Ready     <none>    13h       v1.11.0+d4cacc0   192.168.64.11   <non
 We should then be able to access the application in the browser. In this example, we can access the Node application at `192.168.64.11:31692`:
 
 ![OpenShift node app](../images/openshift_node_app.png)
+
+ในบางกรณี เราจะเห็นว่า Internal-IP แสดงค่า ที่เราไม่สามารถเข้าถึงได้ ค่า External-IP ก็เป็น none
+
+```console
+oc get node -o wide
+NAME        STATUS    ROLES     AGE       VERSION           INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION               CONTAINER-RUNTIME
+localhost   Ready     <none>    5h        v1.11.0+d4cacc0   10.0.2.15     <none>        CentOS Linux 7 (Core)   3.10.0-1062.9.1.el7.x86_64   docker://1.13.1
+```
+
+ดังนั้นเราต้องใช้ `minishift ip` command เพื่อรับค่า IP address ของ cluster's node ของเรา 
+
+```console
+$ minishift ip
+192.168.99.101
+```
+
+ซึ่ง URL สำหรับการเข้าถึง app ของเราก็คือ `http://192.168.99.101:31692`
 
 ## 4.2 Port-forwarding
 
