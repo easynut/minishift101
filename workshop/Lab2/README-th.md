@@ -78,7 +78,7 @@ $ oc new-app -f /path/to/nodejs.json
 ```
 $ oc login
 Authentication required for https://192.168.99.100:8443 (openshift)
-Username: system
+Username: developer
 Password:
 Login successful.
 
@@ -91,6 +91,12 @@ You don't have any projects. You can try to create a new project, by running
 
 ```
 $ oc create clusterrolebinding <any_valid_name> --clusterrole=sudoer --user=<username>
+```
+
+และทำการสร้าง project ก่อนที่จะสร้าง app นะครับ
+
+```
+oc new-project nodejs-ex --display-name="nodejs" --description="Sample Node.js ex app"
 ```
 
 ต่อไป สร้าง application ด้วย source code จาก github
@@ -129,12 +135,19 @@ warning: Cannot check if git requires authentication.
 
 ```
 
-สามารถตรวจสอบสถานะ, deployment, services, การ expose และ route 
+สามารถตรวจสอบสถานะ, deployment, services, การ expose และ route. ทดลองย้อนกลับไปที่ UI console ดูนะครับ ว่า pod, build, deployment และ service รวมไปถึง route มีสถานะอย่างไร
 
 ```
+# get deployments, this command similar to kubectl get deployments
 $ oc get dc
+
+# get services
 $ oc get svc
+
+# expose the service and create the route
 $ oc expose svc nodejs-ex
+
+# get route for the service
 $ oc get route
 ```
 
