@@ -55,7 +55,7 @@ $ minishift ip
 
 ## 4.2 Port-forwarding
 
-Alternatively, if you want to quickly access a port of a specific pod of your cluster, you can also use the oc `port-forward` command:
+ตามหัวข้อนะครับ port forwarding จาก local port ไป remote port เราใช้ command `oc port-forward`:
 
 ```
 $ oc port-forward POD [LOCAL_PORT:]REMOTE_PORT
@@ -65,14 +65,16 @@ $ oc port-forward POD [LOCAL_PORT:]REMOTE_PORT
 
 For web applications, the most common way to expose it is by a route. A route exposes the service as a host name. You can do this by running the command providing you have a host name available:
 
+วิธีที่นิยมใช้ expose web application คือการ expose ด้วย route ซึ่งจะเป็น service ด้วย hostname โดยให้ทาง Openshift เป็นผู้จัดการ โดยที่เราสามารถระบุ hostname ได้ด้วย
+
 ```
 $ oc expose svc/nodejs-ex --hostname=www.example.com
 ```
 
-Congratulations! You have completed all labs in this workshop! You have learnt how to:
-- Create an OpenShift project
-- Create an OpenShift application in various ways
-- How to monitor the status of an application
-- How to access and expose your application
+ฮุเล่ ! ในที่สุดเราก็ได้ทำ Lab เสร็จสิ้นแล้ว ทุกท่านได้เรียนรู้การใช้ Openshift ทั้งหมดตามที่ list มาด้านล่างนี้
+- สร้าง Openshift project
+- สร้าง Openshift application ด้วยวิธีหลายๆแบบ
+- Monitor application อย่างไร
+- เข้าถึง และ expose application อย่างไร
 
 For more information on how to navigate Minishift, check the [Minishift docs](https://docs.okd.io/latest/minishift/index.html)
