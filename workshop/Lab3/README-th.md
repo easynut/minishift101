@@ -4,10 +4,12 @@
 
 ## 0. Preparation
 
-ต้องอย่าลืมว่า RBAC (Role Base Access Control) จะมากับ Openshift เป็น default นะครับ ฉะนั้น User ที่เราใช้ผ่าน cli oc ต้องมี permission ทำการสร้าง project, application และอื่นๆ ด้วยนะครับ
+ต้องอย่าลืมว่า RBAC (Role Base Access Control) จะมากับ Openshift เป็น default นะครับ ฉะนั้น User ที่เราใช้ผ่าน cli oc ต้องมี permission ทำการสร้าง project, application และอื่นๆ ด้วยนะครับ จาก lab นี้ เราจะใช้ user = developer เป็นหลักนะครับ ดังนั้น เพื่อให้เราสามารถเห็นทุก projects และมีสิทธิ๋ในการสั่ง command ผ่าน CLI took ได้เปรียบเสมือน system:admin ได้นั้น เราต้องมีการปรับค่าให้ developer account ตามด้านล่าง
 
 ```
-$ oc create clusterrolebinding <any_valid_name> --clusterrole=sudoer --user=<username>
+$ minishift addons install --defaults
+$ minishift addons enable cluster-admin
+$ oc adm policy  --as system:admin add-cluster-role-to-user cluster-admin developer
 ```
 
 oc login ผ่าน cmd/terminal มาแล้ว เราสามารถ deploy sample application จาก github ได้
