@@ -1,7 +1,5 @@
 [See this lab in English](./README.md)
 
-<a href="http://example.com/" target="_blank">Hello, world!</a>
-
 # Setup overview
 
 ขั้นตอนด้านล่างจะอธิบาย การติดตั้ง minishift และ depenencies ต่างๆ ซึ่ง Basic stps สำหรับการติดตั้งบน personal system ประกอบไปด้วย
@@ -27,12 +25,11 @@ Minishift สามารถถูกนำไปติดตั้งบน Win
 
 ## วิธีการติดตั้ง Minishift บน Windows 10
 
-[![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/mDAEGGaRYqw/hqdefault.jpg)](https://medium.com/@nutta/%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-minishift-%E0%B8%9A%E0%B8%99-windows-10-d4bee756c49d
- "(target=_blank)")
+[![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/mDAEGGaRYqw/hqdefault.jpg)](https://medium.com/@nutta/%E0%B8%A7%E0%B8%B4%E0%B8%98%E0%B8%B5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-minishift-%E0%B8%9A%E0%B8%99-windows-10-d4bee756c49d)
 
 ## ขั้นตอนการติดตั้ง Minishift บน Macbook - macOS
 
- [![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/fS-xhhxz8dY/hqdefault.jpg)](https://medium.com/@nutta/%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-minishift-%E0%B8%9A%E0%B8%99-macbook-macos-f1e138a32cf4 "(target=_blank)")
+ [![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/fS-xhhxz8dY/hqdefault.jpg)](https://medium.com/@nutta/%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-minishift-%E0%B8%9A%E0%B8%99-macbook-macos-f1e138a32cf4)
 
 # Download and install Minishift
 
