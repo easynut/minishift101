@@ -10,7 +10,7 @@ Repository นี้ เป็นที่รวม content สำหรับ m
 
 [![OpenShift Overview](https://www.openshift.com/hubfs/video_Red-Hat-OpenShift-overview.jpg)](https://www.youtube.com/watch?v=5dwMrFxq8sU)
 
-## Minishiftの紹介
+## Minishift
 
 workshops จะประกอบไปด้วยหลายๆ labs/ขั้นตอน แม้กระทั้งการสร้าง การ deploy และการจัดการ microservices ใน ด้วย single-node openshift cluster โดยใช้ minishift. ดังนั้นก่อนเริ่มต้น lab, เราควรจะติดตั้ง minishift ให้ทำงานได้เรียบร้อยเสียก่อน รวมไปทั้งขึ้นตอนการเครียมความพร้อมอื่นๆ ด้วย.
 
