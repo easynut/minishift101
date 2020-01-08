@@ -1,5 +1,7 @@
 [See this lab in English](./README.md)
 
+<a href="http://example.com/" target="_blank">Hello, world!</a>
+
 # Setup overview
 
 ขั้นตอนด้านล่างจะอธิบาย การติดตั้ง minishift และ depenencies ต่างๆ ซึ่ง Basic stps สำหรับการติดตั้งบน personal system ประกอบไปด้วย
