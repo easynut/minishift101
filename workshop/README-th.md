@@ -4,9 +4,9 @@
 
 ขั้นตอนด้านล่างจะอธิบาย การติดตั้ง minishift และ depenencies ต่างๆ ซึ่ง Basic stps สำหรับการติดตั้งบน personal system ประกอบไปด้วย
 
-1. [Configure the virtualization environment](./#configure-the-virtualization-environment)
-2. [Download and install Minishift](./#download-and-install-minishift)
-3. [Start the OpenShift Server](./#start-the-openshift-server)
+1. [Configure the virtualization environment](#configure-the-virtualization-environment)
+2. [Download and install Minishift](#download-and-install-minishift)
+3. [Start the OpenShift Server](#start-the-openshift-server)
 
 สำคัญ เราควรจะต้องมีสิทธิ๋ในการติดตั้ง software บน laptop/pc ที่เราจะใช้งานด้วยนะครับ
 
