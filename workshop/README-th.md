@@ -30,7 +30,7 @@ Minishift สามารถถูกนำไปติดตั้งบน Win
 
 ## ขั้นตอนการติดตั้ง Minishift บน Macbook - macOS
 
- [![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/fS-xhhxz8dY/hqdefault.jpg)](https://medium.com/@nutta/%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-minishift-%E0%B8%9A%E0%B8%99-macbook-macos-f1e138a32cf4){:target="_blank"}
+ [![การติดตั้ง minishift บน Windows](https://img.youtube.com/vi/fS-xhhxz8dY/hqdefault.jpg)](https://medium.com/@nutta/%E0%B8%82%E0%B8%B1%E0%B9%89%E0%B8%99%E0%B8%95%E0%B8%AD%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-minishift-%E0%B8%9A%E0%B8%99-macbook-macos-f1e138a32cf4 target="_blank")
 
 # Download and install Minishift
 
