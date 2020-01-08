@@ -58,6 +58,10 @@ To login as administrator:
 
 *NOTE: Both your console address and your pid will be different.*
 
+# Easy way to do it !
+
+You can follow my [blog post](https://medium.com/@nutta/how-to-set-up-minishift-on-both-windows-10-and-macos-b76f12bc4212) about how to setup minishift on both Windows and macOS.
+
 # Further cluster configurations
 
 After setting up your cluster, you may have specific requirements that you want to enforce in your cluster. The minishift tool allows you to manage the lifecycle of the single-node OpenShift cluster as well as set environment variables, persistent storage and proxy options if your machine is behind a proxy. For more information on these configurations, see the following [link](https://docs.okd.io/latest/minishift/using/basic-usage.html#runtime-options).
