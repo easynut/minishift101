@@ -171,8 +171,6 @@ Login ผ่าน UI:
 
 ![OpenShift login](../images/openshift_login.png)
 
-As mentioned in the `minishift start` output, you can use the user _developer_ and password as any string of characters (at least one) and you will be able to access the UI.
-
 ตามที่เราได้เห็นผ่านทาง cmd/terminal หลังจาก `minishift start` เราสามารถใช้ user _developer_ ส่วน password จะเป็นอะไรก็ได้
 
 หน้า Catalog:
