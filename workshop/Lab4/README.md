@@ -34,6 +34,23 @@ We should then be able to access the application in the browser. In this example
 
 ![OpenShift node app](../images/openshift_node_app.png)
 
+In some cases, Internal-IP can't be reachable (10.x.x.x) and External-IP is none
+
+```console
+oc get node -o wide
+NAME        STATUS    ROLES     AGE       VERSION           INTERNAL-IP   EXTERNAL-IP   OS-IMAGE                KERNEL-VERSION               CONTAINER-RUNTIME
+localhost   Ready     <none>    5h        v1.11.0+d4cacc0   10.0.2.15     <none>        CentOS Linux 7 (Core)   3.10.0-1062.9.1.el7.x86_64   docker://1.13.1
+```
+
+In order to retrieve the IP address of our cluster's node, we can use `minishift ip`:
+
+```console
+$ minishift ip
+192.168.99.101
+```
+
+Hence, the URL of our applicaiton is `http://192.168.99.101:31692`
+
 ## 4.2 Port-forwarding
 
 Alternatively, if you want to quickly access a port of a specific pod of your cluster, you can also use the oc `port-forward` command:
