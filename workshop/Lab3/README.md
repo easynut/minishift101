@@ -4,7 +4,7 @@ After creating an OpenShift application as instructed in the [previous lab (Lab 
 
 ## 0. Preparation
 
-RBAC (Role Base Access Control) comes by defauly with Openshift, the user that we use via oc cli tool , need to have the right permissions in order to create projects, applicaitons, etc.. For this lab, we're going to use user _developer_. First of all and to make it short and simple, we will grant system:admin rights to user _developer_ by using the following commmands. 
+RBAC (Role Base Access Control) set by default on Openshift cluster, the user that we use via oc cli tool , need to have the right permissions in order to create projects, applicaitons, etc.. For this lab, we're going to use user _developer_. First of all and to make it simple, we will grant system:admin rights to user _developer_ by using the following commmands. 
 
 ```
 $ minishift addons install --defaults
@@ -12,7 +12,7 @@ $ minishift addons enable cluster-admin
 $ oc adm policy  --as system:admin add-cluster-role-to-user cluster-admin developer
 ```
 
-now, try to login via `oc login`  by using user _developer_
+now, try to login via `oc login`  with user _developer_
 
 ```
 $ oc login
@@ -26,7 +26,7 @@ You don't have any projects. You can try to create a new project, by running
     oc new-project <projectname>
 ```
 
-next is to create a new project "nodejs-ex"
+next is, to create a new project "nodejs-ex"
 
 ```
 oc new-project nodejs-ex --display-name="nodejs" --description="Sample Node.js ex app"
