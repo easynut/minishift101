@@ -6,9 +6,9 @@ The following section describes how to install Minishift and the required depend
 
 These are the basic steps for setting up Minishift on your personal system:
 
-1. [Configure the virtualization environment](./#configure-the-virtualization-environment)
-2. [Download and install Minishift](./#download-and-install-minishift)
-3. [Start the OpenShift Server](./#start-the-openshift-server)
+1. [Configure the virtualization environment](#configure-the-virtualization-environment)
+2. [Download and install Minishift](#download-and-install-minishift)
+3. [Start the OpenShift Server](#start-the-openshift-server)
 
 The setup procedure should be run as a regular user with permission to launch virtual machines. In the procedure, you will see how to assign that permission, along with ways to configure your hypervisor and command shell to start and effectively interact with Minishift.
 
