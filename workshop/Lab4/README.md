@@ -73,4 +73,9 @@ Congratulations! You have completed all labs in this workshop! You have learnt h
 - How to monitor the status of an application
 - How to access and expose your application
 
+Want to practice more, try to deploy this following nodeJS app by using the UI
+```
+https://github.com/IBM/node-s2i-openshift
+```
+
 For more information on how to navigate Minishift, check the [Minishift docs](https://docs.okd.io/latest/minishift/index.html)
