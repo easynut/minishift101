@@ -77,6 +77,11 @@ $ oc expose svc/nodejs-ex --hostname=www.example.com
 - Monitor application อย่างไร
 - เข้าถึง และ expose application อย่างไร
 
+Want to practice more, try to deploy this following nodeJS app by using the UI
+```
+https://github.com/IBM/node-s2i-openshift
+```
+
 เรียนรู้เพิ่มเติมเกี่ยวกับ Minishift ได้ที่นี่ [Minishift docs](https://docs.okd.io/latest/minishift/index.html)
 
 ## ท้ายที่สุดแล้ว
