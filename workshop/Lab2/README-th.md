@@ -12,7 +12,7 @@
 
 ### 1.1 สร้าง app จาก souce code
 
-เราใช้ command `oc new-app` ใช้สำหรับสร้าง app ใน Openshift โดยใช้ source code ที่มีอยู่แล้ว ไม่ว่าจาก local หรือ จาก repository ไม่ว่า github/gitlab. ถ้ามีการระบุ repository, `new-app` จะทำการตรวจสอบว่าควรใช้ build straetegy แบบใด (**Docker** หรือ **Source**) และ `new-app` จะทำการตรวจสอบว่า ภาษาอะไร ที่ใช้ในการสร้าง app และใช้ builder ที่เหมาะสมกับ app ของเรา
+เราใช้ command `oc new-app` ใช้สำหรับสร้าง app ใน Openshift โดยใช้ source code ที่มีอยู่แล้ว ไม่ว่าจาก local หรือ จาก repository ไม่ว่า github/gitlab. ถ้ามีการระบุ repository, `new-app` จะทำการตรวจสอบว่าควรใช้ build strategy แบบใด (**Docker** หรือ **Source**) และ `new-app` จะทำการตรวจสอบว่า ภาษาอะไร ที่ใช้ในการสร้าง app และใช้ builder ที่เหมาะสมกับ app ของเรา
 
 การ build จาก local DockerFile:
 ```
